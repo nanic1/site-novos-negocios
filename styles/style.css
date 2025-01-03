@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+}
+
+#origemG {
+    width: 100%;
+    height: 200px;
+}
+
+#agenteG {
+    width: 100%;
+    height: 200px;
+}
+
+h1 {
+    font-family: "Russo One", serif;
+    font-weight: 400;
+    font-size: 20pt;
+}
+
+h2 {
+    font-family: "Montserrat", serif;
+    font-weight: 300;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+#container {
+    display: flex;
+    margin: auto;
+    max-height: 480px;
+    max-width: 1200px;
+    flex-direction: column;
+}
+
+#divisoria1 {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#divisoria2 {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#origem {
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 330px;
+    height: 240px;
+    text-align: center;
+}
+
+#agente {
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 430px;
+    height: 240px;
+    text-align: center;
+}
+
+#status {
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 470px;
+    height: 240px;
+    text-align: center;
+}
+
+#contagem {
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 615px;
+    height: 240px;
+    text-align: center;
+}
+
+#tabela {
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 615px;
+    height: 240px;
+    text-align: center;
+}
