@@ -12,8 +12,8 @@ const enderecoInterno = "B3"; // Endereco da celula Interno
 const celulaExterno = planilha[enderecoExterno];
 const celulaInterno = planilha[enderecoInterno];
 
-const valorExterno = celulaExterno ? celulaExterno.v : null; // Valor em INT Externo
-const valorInterno = celulaInterno ? celulaInterno.v : null; // Valor em INT Interno
+let valorExterno = celulaExterno ? celulaExterno.v : null; // Valor em INT Externo
+let valorInterno = celulaInterno ? celulaInterno.v : null; // Valor em INT Interno
 
 console.log(valorExterno)
 console.log(valorInterno)

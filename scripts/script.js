@@ -261,3 +261,18 @@ am5.ready(function() {
       series.appear(1000, 100);
       
       }); // end am5.ready()
+
+const XLSX = require("xlsx")
+
+const arquivo = XLSX.readFile("BaseDados.xlsx"); // Selecionando arquivo de trabalho Excel
+
+const selectPlanilha = arquivo.SheetNames[0] // Selecionando a planila; 0 = Folha1
+const planilha = arquivo.Sheets[selectPlanilha] // Puxando todos os dados da planilha.
+
+const enderecoExterno = "B2"; // Endereco da celula Externo
+const enderecoInterno = "B3"; // Endereco da celula Interno
+const celulaExterno = planilha[enderecoExterno];
+const celulaInterno = planilha[enderecoInterno];
+
+var valorExterno = celulaExterno ? celulaExterno.v : null; // Valor em INT Externo
+var valorInterno = celulaInterno ? celulaInterno.v : null; // Valor em INT Interno
