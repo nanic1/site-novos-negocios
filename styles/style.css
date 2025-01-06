@@ -7,12 +7,22 @@
 
 #origemG {
     width: 100%;
-    height: 200px;
+    height: 90%;
 }
 
 #agenteG {
     width: 100%;
-    height: 200px;
+    height: 90%;
+}
+
+#statusG {
+    width: 100%;
+    height: 90%;
+}
+
+#contagemG {
+    width: 100%;
+    height: 90%;
 }
 
 h1 {
@@ -35,31 +45,32 @@ header {
 #container {
     display: flex;
     margin: auto;
-    max-height: 480px;
-    max-width: 1200px;
     flex-direction: column;
+    align-items: center;
 }
 
 #divisoria1 {
-    margin: 5px;
+    margin: auto;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
 }
 
 #divisoria2 {
     margin: 5px;
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    flex-direction: row;
+    align-items: center;
 }
 
 #origem {
     margin: 5px;
     border: 2px solid black;
     border-radius: 20px;
-    width: 330px;
-    height: 240px;
+    width: 650px;
+    height: 350px;
     text-align: center;
 }
 
@@ -67,8 +78,8 @@ header {
     margin: 5px;
     border: 2px solid black;
     border-radius: 20px;
-    width: 430px;
-    height: 240px;
+    width: 650px;
+    height: 350px;
     text-align: center;
 }
 
@@ -76,8 +87,8 @@ header {
     margin: 5px;
     border: 2px solid black;
     border-radius: 20px;
-    width: 470px;
-    height: 240px;
+    width: 650px;
+    height: 350px;
     text-align: center;
 }
 
@@ -85,8 +96,8 @@ header {
     margin: 5px;
     border: 2px solid black;
     border-radius: 20px;
-    width: 615px;
-    height: 240px;
+    width: 650px;
+    height: 350px;
     text-align: center;
 }
 
@@ -94,7 +105,7 @@ header {
     margin: 5px;
     border: 2px solid black;
     border-radius: 20px;
-    width: 615px;
-    height: 240px;
+    width: 1320px;
+    height: 300px;
     text-align: center;
 }

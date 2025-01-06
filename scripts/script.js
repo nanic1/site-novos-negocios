@@ -43,9 +43,81 @@ am5.ready(function() {
 
 am5.ready(function() {
 
+  // Create root element
+  // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+  var root = am5.Root.new("agenteG");
+  
+  
+  // Set themes
+  // https://www.amcharts.com/docs/v5/concepts/themes/
+  root.setThemes([
+    am5themes_Animated.new(root)
+  ]);
+  
+  
+  // Create chart
+  // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
+  var chart = root.container.children.push(am5percent.PieChart.new(root, {
+    layout: root.verticalLayout
+  }));
+  
+  
+  // Create series
+  // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
+  var series = chart.series.push(am5percent.PieSeries.new(root, {
+    valueField: "value",
+    categoryField: "category"
+  }));
+  
+  series.labels.template.setAll({
+    text: "{value}" // Exibe apenas o valor
+  });
+
+  series.slices.template.setAll({
+    tooltipText: "{category}: {value}"
+  });
+  
+  // Set data
+  // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
+  series.data.setAll([
+    { value: 10, category: "PRISCYLLA" },
+    { value: 9, category: "ALX" },
+    { value: 6, category: "ALEX" },
+    { value: 5, category: "MARCOS SP" },
+    { value: 4, category: "ARTUR" },
+    { value: 3, category: "MARCOS" },
+  ]);
+  
+  
+  // Create legend
+  // https://www.amcharts.com/docs/v5/charts/percent-charts/legend-percent-series/
+  var legend = chart.children.push(am5.Legend.new(root, {
+    centerX: am5.percent(50),
+    x: am5.percent(50),
+    marginTop: 15,
+    marginBottom: 15
+  }));
+  
+  legend.data.setAll(series.dataItems);
+
+  legend.valueLabels.template.setAll({
+    forceHidden: true
+  });
+  
+  // Play initial series animation
+  // https://www.amcharts.com/docs/v5/concepts/animations/#Animation_of_series
+  series.appear(1000, 100);
+  
+  }); // end am5.ready()
+
+
+  // STATUS
+  am5.ready(function() {
+
     // Create root element
     // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-    var root = am5.Root.new("agenteG");
+    var root = am5.Root.new("statusG");
+    
     
     // Set themes
     // https://www.amcharts.com/docs/v5/concepts/themes/
@@ -53,53 +125,140 @@ am5.ready(function() {
       am5themes_Animated.new(root)
     ]);
     
+    
     // Create chart
     // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
-    var chart = root.container.children.push(
-      am5percent.PieChart.new(root, {
-        endAngle: 270
-      })
-    );
+    var chart = root.container.children.push(am5percent.PieChart.new(root, {
+      layout: root.verticalLayout
+    }));
+    
     
     // Create series
     // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
-    var series = chart.series.push(
-      am5percent.PieSeries.new(root, {
-        valueField: "value",
-        categoryField: "category",
-        endAngle: 270
-      })
-    );
-    
-    series.states.create("hidden", {
-      endAngle: -90
+    var series = chart.series.push(am5percent.PieSeries.new(root, {
+      valueField: "value",
+      categoryField: "category"
+    }));
+  
+    series.slices.template.setAll({
+      tooltipText: "{category}: {value}"
+    });
+
+    series.labels.template.setAll({
+      text: "{value}" // Exibe apenas o valor
     });
     
     // Set data
     // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
-    series.data.setAll([{
-      category: "Priscylla",
-      value: 22
-    }, {
-      category: "ALX",
-      value: 6
-    }, {
-      category: "Alex",
-      value: 5
-    }, {
-      category: "Captação inicial",
-      value: 5
-    }, {
-      category: "Marcos SP",
-      value: 5
-    }, {
-      category: "Artur",
-      value: 128.3
-    }, {
-      category: "UK",
-      value: 99
-    }]);
+    series.data.setAll([
+      { value: 10, category: "CADASTRO" },
+      { value: 9, category: "CALL" },
+      { value: 6, category: "COMITE" },
+      { value: 5, category: "CONTRATO" },
+      { value: 4, category: "POS CALL" },
+      { value: 3, category: "PRE ANALISE" },
+    ]);
     
+    
+    // Create legend
+    // https://www.amcharts.com/docs/v5/charts/percent-charts/legend-percent-series/
+    var legend = chart.children.push(am5.Legend.new(root, {
+      centerX: am5.percent(50),
+      x: am5.percent(50),
+      marginTop: 15,
+      marginBottom: 15
+    }));
+    
+    legend.data.setAll(series.dataItems);
+  
+    legend.labels.template.setAll({
+      fontSize: 14 // Change the font size as needed
+    });
+    
+    legend.valueLabels.template.setAll({
+      forceHidden: true
+    });
+
+    // Play initial series animation
+    // https://www.amcharts.com/docs/v5/concepts/animations/#Animation_of_series
     series.appear(1000, 100);
     
     }); // end am5.ready()
+
+
+    // CONTAGEM
+    am5.ready(function() {
+
+      // Create root element
+      // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+      var root = am5.Root.new("contagemG");
+      
+      
+      // Set themes
+      // https://www.amcharts.com/docs/v5/concepts/themes/
+      root.setThemes([
+        am5themes_Animated.new(root)
+      ]);
+      
+      
+      // Create chart
+      // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
+      var chart = root.container.children.push(am5percent.PieChart.new(root, {
+        layout: root.verticalLayout
+      }));
+      
+      
+      // Create series
+      // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
+      var series = chart.series.push(am5percent.PieSeries.new(root, {
+        valueField: "value",
+        categoryField: "category"
+      }));
+    
+      series.slices.template.setAll({
+        tooltipText: "{category}: {value}"
+      });
+  
+      series.labels.template.setAll({
+        text: "{value}" // Exibe apenas o valor
+      });
+      
+      // Set data
+      // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
+      series.data.setAll([
+        { value: 10, category: "PRIMEIRA OP." },
+        { value: 9, category: "FORMALIZACAO DO CONT." },
+        { value: 6, category: "COMITE" },
+        { value: 5, category: "VISITA" },
+        { value: 4, category: "CADASTRO" },
+        { value: 3, category: "CONTRATO" },
+        { value: 7, category: "ENVIO DE DOC."},
+        { value: 1, category: "POS-CALL"},
+        { value: 5, category: "ENVIO DE PROPOSTA"},
+      ]);
+      
+      
+      // Create legend
+      // https://www.amcharts.com/docs/v5/charts/percent-charts/legend-percent-series/
+      var legend = chart.children.push(am5.Legend.new(root, {
+        centerX: am5.percent(50),
+        x: am5.percent(50),
+        marginTop: 15,
+        marginBottom: 15
+      }));
+      
+      legend.data.setAll(series.dataItems);
+    
+      legend.labels.template.setAll({
+        fontSize: 14 // Change the font size as needed
+      });
+      
+      legend.valueLabels.template.setAll({
+        forceHidden: true
+      });
+  
+      // Play initial series animation
+      // https://www.amcharts.com/docs/v5/concepts/animations/#Animation_of_series
+      series.appear(1000, 100);
+      
+      }); // end am5.ready()
