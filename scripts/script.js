@@ -1,5 +1,4 @@
 // Gráfico da Origem
-
 am5.ready(function() {
 
     // Create root element
