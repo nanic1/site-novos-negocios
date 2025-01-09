@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <h1>New Business 2025</h1>
+        <h1>Novos Negócios 2025</h1>
     </header>
     <img src="" alt="">
     <div id="filtro-status">
@@ -35,27 +35,162 @@
         <div id="divisoria1">
             <div id="origem">
                 <h2>Origem</h2>
-                <div id="origemG"></div>
+                <div id="chart1">
+                    <canvas id="grafico1"></canvas>
+                </div>
+                
             </div>
             <div id="agente">
                 <h2>Agente</h2>
-                <div id="agenteG"></div>
+                <div id="chart2">
+                    <canvas id="grafico2"></canvas>
+                </div>
             </div>
         </div>
         <div id="divisoria2">
             <div id="status">
                 <h2>Status</h2>
-                <div id="statusG"></div>
+                <div id="chart3">
+                    <canvas id="grafico3"></canvas>
+                </div>
             </div>
             <div id="contagem">
                 <h2>Contagem Etapa por Etapa</h2>
-                <div id="contagemG"></div>
+                <div id="chart4">
+                    <canvas id="grafico4"></canvas>
+                </div>
             </div>
         </div>
-        <div id="tabela">
-            <h2>Tabela</h2>
+        <div id="divisoria3">
+            <div id="tabela">
+                <h2>Tabela</h2>
+            </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        numero1 = 35
 
+        const chart1 = document.getElementById('grafico1');
+        const chart2 = document.getElementById('grafico2');
+        const chart3 = document.getElementById('grafico3');
+        const chart4 = document.getElementById('grafico4')
+
+        new Chart(chart1, {
+            type: 'pie',
+            data: {
+                labels: ['Externo', 'Interno'],
+                datasets: [
+                    {
+                        label: 'Status',
+                        data: [numero1, numero1],
+                        borderWidth: 1,
+                        hoverOffset: 10
+                    }
+                ]
+            },
+            options: {
+                resposive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 20,
+                            boxHeight: 20,
+                            borderRadius: 5,
+                        }
+                    },
+                }
+            }
+        })
+
+        new Chart(chart2, {
+            type: 'pie',
+            data: {
+                labels: ['PRISCYLLA', 'ALX', 'ALEX', 'MARCOS SP', 'ARTUR', 'MARCOS'],
+                datasets: [
+                    {
+                        label: 'Status',
+                        data: [22, 6, 5, 5, 3, 1],
+                        borderWidth: 1,
+                        hoverOffset: 10
+                    }
+                ]
+            },
+            options: {
+                resposive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 20,
+                            boxHeight: 20,
+                            borderRadius: 5,
+                        }
+                    },
+                }
+            }
+        })
+
+        new Chart(chart3, {
+            type: 'pie',
+            data: {
+                labels: ['CADASTRO', 'CALL', 'COMITE', 'CONTRATO', 'PÓS CALL', 'PRÉ-ANALISE'],
+                datasets: [
+                    {
+                        label: 'Status',
+                        data: [1, 8, 3, 1, 8, 4],
+                        borderWidth: 1,
+                        hoverOffset: 10
+                    }
+                ]
+            },
+            options: {
+                resposive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 20,
+                            boxHeight: 20,
+                            borderRadius: 5,
+                        }
+                    },
+                }
+            }
+        })
+
+        new Chart(chart4, {
+            type: 'pie',
+            data: {
+                labels: ['Primeira operação', 'Formalização do contrato', 'Comitê', 'Visita', 'Cadastro', 'Contato', 'Envio de documentação', 'Pós-call', 'Envio de proposta'],
+                datasets: [
+                    {
+                        label: 'Status',
+                        data: [27, 15, 7, 4, 3, 3, 3, 3, 3,],
+                        borderWidth: 1,
+                        hoverOffset: 10
+                    }
+                ]
+            },
+            options: {
+                resposive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 20,
+                            boxHeight: 20,
+                            borderRadius: 5,
+                            padding: 4,
+                            font: {
+                                size: 12
+                            }
+                        }
+                    },
+                }
+            }
+        })
+    </script>
 </body>
 </html>

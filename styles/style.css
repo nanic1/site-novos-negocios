@@ -7,7 +7,7 @@
 
 #origemG {
     width: 100%;
-    height: 90%;
+    height: 85%;
 }
 
 #agenteG {
@@ -39,6 +39,7 @@ h2 {
 header {
     display: flex;
     justify-content: center;
+    text-align: center;
     margin: 10px;
 }
 
@@ -46,7 +47,7 @@ header {
     display: flex;
     margin: auto;
     flex-direction: column;
-    align-items: center;
+    max-width: 1350px;
 }
 
 #divisoria1 {
@@ -58,18 +59,26 @@ header {
 }
 
 #divisoria2 {
-    margin: 5px;
+    margin: auto;
     display: flex;
-    justify-content: center;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+}
+
+#divisoria3 {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 #origem {
     margin: 5px;
     border: 2px solid black;
     border-radius: 20px;
-    width: 650px;
+    width: 600px;
     height: 350px;
     text-align: center;
 }
@@ -78,7 +87,7 @@ header {
     margin: 5px;
     border: 2px solid black;
     border-radius: 20px;
-    width: 650px;
+    width: 600px;
     height: 350px;
     text-align: center;
 }
@@ -87,7 +96,7 @@ header {
     margin: 5px;
     border: 2px solid black;
     border-radius: 20px;
-    width: 650px;
+    width: 600px;
     height: 350px;
     text-align: center;
 }
@@ -96,7 +105,7 @@ header {
     margin: 5px;
     border: 2px solid black;
     border-radius: 20px;
-    width: 650px;
+    width: 600px;
     height: 350px;
     text-align: center;
 }
@@ -105,7 +114,35 @@ header {
     margin: 5px;
     border: 2px solid black;
     border-radius: 20px;
-    width: 1320px;
+    width: 1220px;
+    height: 400px;
+    text-align: center; 
+}
+
+#chart1 {
+    margin: auto;
+    margin-top: 10px;
+    width: 300px;
     height: 300px;
-    text-align: center;
+}
+
+#chart2 {
+    margin: auto;
+    margin-top: 10px;
+    width: 300px;
+    height: 300px;
+}
+
+#chart3 {
+    margin: auto;
+    margin-top: 10px;
+    width: 300px;
+    height: 300px;
+}
+
+#chart4 {
+    margin: auto;
+    margin-top: 10px;
+    width: 300px;
+    height: 350px;
 }
