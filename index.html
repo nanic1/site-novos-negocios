@@ -8,7 +8,7 @@
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-    <script src="scripts/script.js"></script>
+    
 </head>
 <body>
     <header>
@@ -69,6 +69,14 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
+        const arquivo = 'BaseDados.xlsx'
+
+        var lerArquivo = new FileReader();
+        lerArquivo.readAsArrayBuffer(arquivo[0])
+        
+        var data = new Uint8Array(reader.result);
+        var work_book = XLSX.read(data, {type:'array'});
+
         numero1 = 35
 
         const chart1 = document.getElementById('grafico1');
@@ -83,7 +91,7 @@
                 datasets: [
                     {
                         label: 'Status',
-                        data: [numero1, numero1],
+                        data: [celulaExterno, celulaInterno],
                         borderWidth: 1,
                         hoverOffset: 10
                     }
