@@ -12,20 +12,31 @@
         const workbook = XLSX.read(arrayBuffer, { type: 'array' });
 
         // Seleciona a primeira planilha
-        const firstSheetName = workbook.SheetNames[0];
-        const worksheet = workbook.Sheets[firstSheetName];
+        const guiaBackEnd = workbook.SheetNames[4];
+        const worksheet = workbook.Sheets[guiaBackEnd];
 
         // Lê os valores das células específicas
-        const enderecoExterno = 'B2';
-        const enderecoInterno = 'B3';
+        const enderecoAtendidas = 'N4';
+        const enderecoAtendidasN = 'N5';
 
-        const enderecoPriscylla = 'E2'
-        const enderecoMauro = 'E3'
-        const enderecoCedente = 'E4'
-        const enderecoAlex = 'E5'
+        const enderecoOrigemNome1 = 'P4'
+        const enderecoOrigemValor1 = 'Q4'
+        const enderecoOrigemNome2 = 'P5'
+        const enderecoOrigemValor2 = 'Q5'
+        const enderecoOrigemNome3 = 'P6'
+        const enderecoOrigemValor3 = 'Q6'
+        const enderecoOrigemNome4 = 'P7'
+        const enderecoOrigemValor4 = 'Q7'
 
-        const valorExterno = worksheet[enderecoExterno] ? worksheet[enderecoExterno].v : null;
-        const valorInterno = worksheet[enderecoInterno] ? worksheet[enderecoInterno].v : null;
+        const enderecoEmpreAtend = 'T4'
+        const enderecoEmpreAtendN = 'T5'
+        const enderecoSemLigacao = 'T6'
+        
+
+        
+        const valorAtendidas = worksheet[enderecoAtendidas] ? worksheet[enderecoAtendidas].v : null;
+        const valorAtendidasN = worksheet[enderecoAtendidasN] ? worksheet[enderecoAtendidasN].v : null;
+        
         const valorPriscylla = worksheet[enderecoPriscylla] ? worksheet[enderecoPriscylla].v : null;
         const valorMauro = worksheet[enderecoMauro] ? worksheet[enderecoMauro].v : null;
         const valorCedente = worksheet[enderecoCedente] ? worksheet[enderecoCedente].v : null;
