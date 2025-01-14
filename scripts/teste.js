@@ -80,11 +80,11 @@
         new Chart(chart2, {
             type: 'pie',
             data: {
-                labels: ['PRISCYLLA', 'ALX', 'ALEX', 'MARCOS SP', 'ARTUR', 'MARCOS'],
+                labels: ['PRISCYLLA', 'MAURO', 'ALEX', 'VISÃO CEDENTE'],
                 datasets: [
                     {
                         label: 'Status',
-                        data: [valorPriscylla, 4, valorAlex, 5, 3, 1],
+                        data: [valorPriscylla, valorMauro, valorAlex, valorCedente],
                         borderWidth: 1,
                         hoverOffset: 10
                     }
